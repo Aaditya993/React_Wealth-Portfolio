@@ -3,6 +3,9 @@ Monato Wealth Suite
 <img width="3780" height="1890" alt="MONATO" src="https://github.com/user-attachments/assets/27aaeb4e-d966-4823-8cb5-6531d3ba0fe7" />
 
 
+Vercel : https://react-wealth-portfolio.vercel.app/
+
+
 Project Overview:
 
 Monato Wealth Suite is a personal wealth and investment management dashboard focused on portfolio tracking, trade execution, and risk assessment. Built as a dedicated product, the application combines modern financial interface design with fundamental computer science algorithms, inspired by professional platforms like Zerodha and Bloomberg. This project serves as an academic submission showcasing React.js architecture, custom hook state management, and applied data structures.
