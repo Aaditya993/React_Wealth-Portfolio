@@ -23,6 +23,16 @@ const NETWORK_ICONS = {
 };
 
 export function ClearingMap() {
+
+  const NETWORK_ICONS = {
+  1: <ClipboardText size={26} weight="duotone" />,
+  2: <Bank size={26} weight="duotone" />,
+  3: <Lightning size={26} weight="duotone" />,
+  4: <ArrowsClockwise size={26} weight="bold" />,
+  5: <ShieldChevron size={26} weight="duotone" />,
+  6: <Money size={26} weight="duotone" />,
+  7: <CheckCircle size={26} weight="fill" />,
+};
   const [progress,    setProgress]    = useState(0);          // # of steps completed
   const [animating,   setAnimating]   = useState(false);
   const [activeStep,  setActiveStep]  = useState(null);       // detail panel
@@ -140,7 +150,7 @@ export function ClearingMap() {
         {/* Detail panel */}
         {activeStep && (
           <div className="bg-slate-700/30 border border-slate-600/40 rounded-xl px-5 py-4 flex items-start gap-4 animate-fade-in">
-            <span className="text-3xl flex-shrink-0">{activeStep.icon}</span>
+            <span className="text-3xl flex-shrink-0">{NETWORK_ICONS[activeStep.id]}</span>
             <div>
               <p className="text-sm font-bold text-slate-100 mb-1">
                 Step {activeStep.id}: {activeStep.label}

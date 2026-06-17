@@ -13,9 +13,17 @@ const NAV_ITEMS = [
   { id: 'trading',   icon: <ArrowsLeftRight size={20} weight="fill"/>,label: 'Trading',   tag: 'Orders'       },
   { id: 'network',   icon: <Graph size={20} weight="fill" />,        label: 'Network',   tag: 'Clearing'     },
   { id: 'advisor',   icon: <Crosshair size={20} weight="fill" />,    label: 'Advisor',   tag: 'Diversify'    },
-];q
+];
 
 export function Sidebar({ activeView, onNavigate }) {
+
+  const NAV_ITEMS = [
+  { id: 'dashboard', icon: <SquaresFour size={20} weight="fill" />,  label: 'Overview',  tag: 'Dashboard'   },
+  { id: 'ledger',    icon: <Receipt size={20} weight="fill" />,      label: 'Ledger',    tag: 'Transactions' },
+  { id: 'trading',   icon: <ArrowsLeftRight size={20} weight="fill"/>,label: 'Trading',   tag: 'Orders'       },
+  { id: 'network',   icon: <Graph size={20} weight="fill" />,        label: 'Network',   tag: 'Clearing'     },
+  { id: 'advisor',   icon: <Crosshair size={20} weight="fill" />,    label: 'Advisor',   tag: 'Diversify'    },
+];
   return (
     <aside className="w-16 lg:w-56 bg-slate-900 border-r border-slate-700/50 flex flex-col h-screen sticky top-0 z-20 flex-shrink-0">
 

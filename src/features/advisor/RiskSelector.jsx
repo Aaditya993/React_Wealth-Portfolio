@@ -24,6 +24,23 @@ const PROFILES = [
 ];
 
 export function RiskSelector({ value, onChange }) {
+
+  const PROFILES = [
+  {
+    key:      'Conservative',
+    icon:     <ShieldCheck size={28} weight="fill" />,
+    headline: 'Capital Preservation',
+    desc:     'Prioritises stability and downside protection. Heavy allocation to healthcare, financials, and consumer staples. Accepts lower upside in exchange for reduced drawdown risk.',
+    accent:   'blue',
+  },
+  {
+    key:      'Aggressive',
+    icon:     <RocketLaunch size={28} weight="fill" />,
+    headline: 'Growth Maximiser',
+    desc:     'Maximises long-term returns via concentrated technology exposure. Accepts higher volatility and drawdowns. Suitable for long time-horizons with high risk tolerance.',
+    accent:   'orange',
+  },
+];
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
       {PROFILES.map(p => {
