@@ -32,21 +32,20 @@ export function useTradeQueue(initialQueue = []) {
     setQueue(prev => [...prev, stamped]);
   }, []);
 
-  /**
+/**
    * dequeue — remove and return the front order (FIFO).
-   * Because setState is async we capture the value via a ref trick.
    */
   const dequeue = useCallback(() => {
-    let executed = null;
-    setQueue(prev => {
-      if (prev.length === 0) return prev;
-      executed = prev[0];          // capture front item
-      return prev.slice(1);        // return rest
-    });
-    // Note: executed will be available synchronously on the next
-    // render cycle; callers should rely on the returned value.
+    // 1. Read directly from the current synchronous state
+    if (queue.length === 0) return null;
+    const executed = queue[0];
+    
+    // 2. Tell React to update the visual list in the background
+    setQueue(prev => prev.slice(1));
+    
+    // 3. Return the captured item instantly to the math engine
     return executed;
-  }, []);
+  }, [queue]); // Make sure to add 'queue' to this dependency array!
 
   /**
    * cancel — remove a specific order from the queue by id.
