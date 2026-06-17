@@ -4,18 +4,19 @@
 // ============================================================
 import React from 'react';
 import { Badge } from '../../components/ui/Badge';
+import { ShieldCheck, RocketLaunch } from "@phosphor-icons/react";
 
 const PROFILES = [
   {
     key:      'Conservative',
-    icon:     '🛡️',
+    icon:     <ShieldCheck size={28} weight="fill" />,
     headline: 'Capital Preservation',
     desc:     'Prioritises stability and downside protection. Heavy allocation to healthcare, financials, and consumer staples. Accepts lower upside in exchange for reduced drawdown risk.',
     accent:   'blue',
   },
   {
     key:      'Aggressive',
-    icon:     '🚀',
+    icon:     <RocketLaunch size={28} weight="fill" />,
     headline: 'Growth Maximiser',
     desc:     'Maximises long-term returns via concentrated technology exposure. Accepts higher volatility and drawdowns. Suitable for long time-horizons with high risk tolerance.',
     accent:   'orange',

@@ -10,6 +10,7 @@ import { RiskSelector }   from './RiskSelector';
 import { Card }   from '../../components/ui/Card';
 import { Badge }  from '../../components/ui/Badge';
 import { Button } from '../../components/ui/Button';
+import { ShieldCheck, RocketLaunch } from "@phosphor-icons/react";
 
 // ── Allocation bar component ─────────────────────────────────
 function AllocationBar({ label, currentPct, idealPct, diff }) {

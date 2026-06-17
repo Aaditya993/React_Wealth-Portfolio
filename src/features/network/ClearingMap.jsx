@@ -7,6 +7,20 @@ import React, { useState, useRef } from 'react';
 import { CLEARING_STEPS } from '../../data/mockData';
 import { Card }   from '../../components/ui/Card';
 import { Button } from '../../components/ui/Button';
+import { 
+  ClipboardText, Bank, Lightning, ArrowsClockwise, 
+  ShieldChevron, Money, CheckCircle 
+} from "@phosphor-icons/react";
+
+const NETWORK_ICONS = {
+  1: <ClipboardText size={26} weight="duotone" />,
+  2: <Bank size={26} weight="duotone" />,
+  3: <Lightning size={26} weight="duotone" />,
+  4: <ArrowsClockwise size={26} weight="bold" />,
+  5: <ShieldChevron size={26} weight="duotone" />,
+  6: <Money size={26} weight="duotone" />,
+  7: <CheckCircle size={26} weight="fill" />,
+};
 
 export function ClearingMap() {
   const [progress,    setProgress]    = useState(0);          // # of steps completed
@@ -89,7 +103,7 @@ export function ClearingMap() {
                             ? 'bg-slate-700 border-cyan-400/60'
                             : 'bg-slate-800/80 border-slate-600/60 group-hover:border-slate-400',
                     ].join(' ')}>
-                      {step.icon}
+                      {NETWORK_ICONS[step.id]}
                     </div>
 
                     {/* Step number */}

@@ -3,14 +3,17 @@
 // Collapsible left navigation rail.
 // ============================================================
 import React from 'react';
+import { 
+  SquaresFour, Receipt, ArrowsLeftRight, Graph, Crosshair 
+} from "@phosphor-icons/react";
 
 const NAV_ITEMS = [
-  { id: 'dashboard', icon: '◈', label: 'Overview', tag: 'Dashboard' },
-  { id: 'ledger', icon: '≡', label: 'Ledger', tag: 'Transactions' },
-  { id: 'trading', icon: '⇅', label: 'Trading', tag: 'Orders' },
-  { id: 'network', icon: '◉', label: 'Network', tag: 'Clearing' },
-  { id: 'advisor', icon: '◎', label: 'Advisor', tag: 'Diversify' },
-];
+  { id: 'dashboard', icon: <SquaresFour size={20} weight="fill" />,  label: 'Overview',  tag: 'Dashboard'   },
+  { id: 'ledger',    icon: <Receipt size={20} weight="fill" />,      label: 'Ledger',    tag: 'Transactions' },
+  { id: 'trading',   icon: <ArrowsLeftRight size={20} weight="fill"/>,label: 'Trading',   tag: 'Orders'       },
+  { id: 'network',   icon: <Graph size={20} weight="fill" />,        label: 'Network',   tag: 'Clearing'     },
+  { id: 'advisor',   icon: <Crosshair size={20} weight="fill" />,    label: 'Advisor',   tag: 'Diversify'    },
+];q
 
 export function Sidebar({ activeView, onNavigate }) {
   return (
@@ -25,7 +28,7 @@ export function Sidebar({ activeView, onNavigate }) {
             className="w-8 h-8 rounded-lg object-cover flex-shrink-0 shadow-lg shadow-cyan-500/20"
           />
           <div className="hidden lg:block">
-            <p className="text-slate-100 font-bold text-sm leading-tight">Portfolio</p>
+            <p className="text-slate-100 font-bold text-sm leading-tight">Monato</p>
             <p className="text-cyan-400 text-[10px] font-bold tracking-[0.22em] uppercase mt-0.5">Wealth Suite</p>
           </div>
         </div>
